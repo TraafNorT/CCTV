@@ -299,4 +299,3 @@ document.getElementById("input_confirm").addEventListener('click', () => {
     console.log(posData);
   });
 });
-//
