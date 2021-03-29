@@ -5,8 +5,9 @@ import {draw, redraw, camData, rotate_cam} from './camDraw.js';
 document.getElementById("input_confirm").addEventListener('click', () => {
 
   let drawData = [
-    {id: 1, type: "camera", color: "green"},
+    {id: 1, type: "camera", color: "darkred"},
     {id: 2, type: "camera", color: "crimson"},
+    {id: 3, type: "medkit", color: "green"}
   ];
 
   let file = document.getElementById("input").value.substr(12);
