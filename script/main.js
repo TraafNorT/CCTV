@@ -209,9 +209,27 @@ document.getElementById("input_confirm").addEventListener('click', () => {
         editName.setAttribute("class", "editName");
         editName.innerHTML = "Изменить";
 
-//        editName.addEventListener("click", () => {
-//
-//        });
+        editName.addEventListener("click", () => {
+          ballName.remove();
+          editName.remove();
+          let inputName = document.createElement("input");
+          inputName.setAttribute("class", "inputName");
+          let confirmName = document.createElement("button");
+          confirmName.setAttribute("class", "confirmName");
+          confirmName.innerHTML = "Подтвердить";
+
+          confirmName.addEventListener("click", () => {
+            posData[ballid-1]["name"] = inputName.value;
+            inputName.remove();
+            confirmName.remove();
+            infoDiv.appendChild(editName);
+            ballName.innerHTML = `Имя: ${posData[ballid-1]["name"]}`;
+            infoDiv.appendChild(ballName);
+          });
+
+          infoDiv.appendChild(inputName);
+          infoDiv.appendChild(confirmName);
+        });
 
         let deleteBall = document.createElement("button");
         deleteBall.setAttribute("id", "deleteBallButton");
@@ -254,6 +272,8 @@ document.getElementById("input_confirm").addEventListener('click', () => {
           balltype.remove();
           ballRotation.remove();
           ballfov.remove();
+          inputName.remove();
+          confirmName.remove();
         });
       });
 

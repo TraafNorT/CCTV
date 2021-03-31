@@ -189,3 +189,13 @@ svg {
   position: absolute;
   height: 100%;
 }
+.inputName {
+  position: absolute;
+  top: 58px;
+  left: 130px;
+}
+.confirmName {
+  position: absolute;
+  top: 58px;
+  left: 330px;
+}
